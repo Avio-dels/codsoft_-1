@@ -1,0 +1,56 @@
+import java.util.*;
+class Calculator {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Name of Student : " );
+        String s = sc.next();
+        System.out.print("Roll no. : " );
+        int r= sc.nextInt();
+        System.out.println("Enter Marks Obtained(out of 100) in the Following Subjects " );
+
+        System.out.print("English : " );
+        int a = sc.nextInt();
+        System.out.print("Maths : " );
+        int b = sc.nextInt();
+        System.out.print("Physics : " );
+        int c = sc.nextInt();
+        System.out.print("Chemistry : " );
+        int d = sc.nextInt();
+        int k= (a+b+c+d);
+        System.out.println("Total Marks Obtained (out of 400) : " + k );
+        double per= (a+b+c+d)/4;
+        System.out.println("Percentage : " + per + "%" );
+        int t = (int) (per/10);
+        switch (t)
+        {
+            case 0 :
+            case 1 :
+            case 2:
+            case 3:
+                System.out.println("Grade: D");
+                System.out.println("Result : Fail");
+
+                break;
+            case 4:
+            case 5:System.out.println("Grade: C");
+                System.out.println("Result : Pass");
+                break;
+            case 6:
+            case 7: System.out.println("Grade: B");
+                System.out.println("Result : Pass");
+
+                break;
+            case 8:
+            case 9:
+            case 10: System.out.println("Grade: A ");
+                System.out.println("Result : Pass");
+
+                break;
+
+            default: System.out.println("Invalid Input");
+            break;
+
+        }
+
+    }
+}
